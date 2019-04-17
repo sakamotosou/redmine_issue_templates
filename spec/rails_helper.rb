@@ -21,7 +21,7 @@ RSpec.configure do |config|
           # NOTE: When using Chrome headress, default window size is 800x600.
           # In case window size is not specified, Redmine renderes its contents with responsive mode.
           #
-          chromeOptions: { args: %w[headless disable-gpu window-size=1280,800] }
+          chromeOptions: { args: %w[headless disable-gpu no-sandbox window-size=1280,800] }
         )
         Capybara::Selenium::Driver.new(
           app,
